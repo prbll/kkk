@@ -38,9 +38,9 @@ namespace BANKI_DZ
                     {
                         Console.WriteLine($"{i + 1} Перевели на имя: {NameMas[i]}, {MoneyMas[i]} руб.");
                     }
-                    //1 задача
+                    //1 задача - минимальная сумма денег, переведенная одному владельцу счета.
                     Console.WriteLine(NameMas.Select((x, i) => (x, MoneyMas[i])).GroupBy(g => g.x).Where(g => g.Count() == 1).Select(x => x.First()).OrderBy(x => x.Item2).FirstOrDefault());
-                    //2 задача
+                    //2 задача - суммарное количество транзакций одному владельцу счета.
                     var res = NameMas.GroupBy(x => x?.ToLower()).OrderByDescending(x => x?.Count());
                     Console.WriteLine($" На счет {res.First().Key}  транзакции {res.First().Count()} раз(а)");
                 }
