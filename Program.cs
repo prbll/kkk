@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace Banki
+namespace BANKI_DZ
 {
     class Program
     {
         static void Main(string[] args)
         {
-            DataAboutPerson person = new DataAboutPerson();
-            person.DataInputandOutput(); // вызов метода
+            Class1 bank = new Class1();
+            bank.DataAboutPerson();
         }
     }
 }
